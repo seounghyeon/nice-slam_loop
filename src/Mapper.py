@@ -39,7 +39,9 @@ class Mapper(object):
         self.mapping_idx = slam.mapping_idx
         self.mapping_cnt = slam.mapping_cnt
         self.decoders = slam.shared_decoders
-        self.estimate_c2w_list = slam.estimate_c2w_list
+        "self.estimate_c2w_list = slam.estimate_c2w_list"
+        self.estimate_c2w_list = slam.gt_c2w_list
+
         self.mapping_first_frame = slam.mapping_first_frame
 
         self.scale = cfg['scale']
